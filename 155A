@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int n;
+	cin>>n;
+	int *s=new int[n];
+	for(int i=0;i<n;i++)
+		cin>>s[i];
+	int count=0,min=s[0],max=s[0];
+	for(int i=1;i<n;i++)
+		if(s[i]>max)
+		{
+			count++;
+			max=s[i];
+		}
+		else if(s[i]<min)
+		{
+			count++;
+			min=s[i];
+		}
+	cout<<count;
+    return 0;
+}
