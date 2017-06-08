@@ -1,0 +1,38 @@
+#include  <iostream>
+#include <string>
+#include <ctype.h>
+using namespace std;
+ int main()
+ {
+     int capital=0,small=0;
+     string s;
+	 char c;
+     cin>>s;
+     for(int i=0;s[i]!='\0';i++)
+     {
+         if(s[i] & 0x20)
+         {
+             small+=1;
+         }
+         else
+            capital+=1;
+     }
+	 
+     if(small>=capital)
+     {
+		 for( int i=0;s[i] != '\0' ;i++)
+		 {
+			 s[i] = s[i]| 0x20;
+		 }
+		
+     }
+	 else 
+		 for (int i=0; s[i] != '\0' ;i++)
+		 {
+			 s[i] = s[i] & 0xdf;
+		 }
+	 cout << s;
+
+ return 0;
+ 
+ }
