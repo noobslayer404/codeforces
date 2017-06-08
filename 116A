@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int n,a,b,max=0,cap=0;
+	cin>>n;
+	for(int i=1;i<=n;i++)
+	{
+		cin>>a>>b;
+		cap-=a;
+		cap+=b;
+		if(max <= cap)
+			max=cap;
+	}
+	cout<<max;
+    return 0;
+}
