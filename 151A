@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int minimum(int &n1,int &n2,int &n3)
+{
+	if( n1 <n2 && n1 <n3)
+		return n1;
+	else if(n2 <n1 && n2 <n3)
+		return n2;
+
+	return n3;
+}
+
+int main()
+{
+	int n,k,l,c,d,p,nl,np,min,n1,n2,n3;
+	cin>>n>>k>>l>>c>>d>>p>>nl>>np;
+	n1=(k*l)/nl;
+	n2=c*d;
+	n3=p/np;
+	min=minimum(n1,n2,n3)/n;
+	cout<<min<<endl;
+    return 0;
+}
