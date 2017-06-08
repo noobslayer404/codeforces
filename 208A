@@ -1,0 +1,9 @@
+# python 3.6
+x=input()
+
+a, s = [],""
+a = x.split("WUB")
+for i in a:
+    if not i == '':
+        s+=i+" "
+print(s)
