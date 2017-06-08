@@ -1,0 +1,14 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()   
+{
+	int s1,s2,s3,counter;
+	cin>>s1>>s2>>s3;
+	counter=4*( sqrt(s1*s2/s3) + sqrt(s1*s3/s2) + sqrt(s2*s3/s1));
+	if( 4*( sqrt(s1*s2/s3) + sqrt(s1*s3/s2) + sqrt(s2*s3/s1)) > counter )
+		counter++;
+	cout<<counter;
+    return 0;
+}
