@@ -1,0 +1,27 @@
+
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+	int n, m, counter = 0;
+	cin >> n >> m;
+	for(int a=0; a<1000; ++a)
+	{
+		for(int b=0; b<1000; ++b)
+		{
+			if(a*a + b == n)
+			{
+				if(a + b*b == m)
+					counter++;
+			}
+			if(a*a + b > n)
+				break;
+		}
+	}
+	cout << counter << endl;
+}
