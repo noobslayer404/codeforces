@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    long long  n,m,v=1,x,c=0;
+    cin>>n>>m;
+    for(int i=0;i<m;i++)
+    {
+        cin>>x;
+        if(x>v)
+        {
+            c+=(x-v);
+            v=x;
+        }
+        else if(x < v)
+        {
+            c+=(n-v)+(x);
+            v=x;
+        }
+    }
+    cout<<c;
+}
