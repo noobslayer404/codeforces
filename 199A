@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int r1,r2,n=0,temp,s[3]={0,1,1};
+    cin>>n;
+    if(n==3)
+        {
+        cout<<1<<" "<<1<<" "<<1;
+                return 0;
+        }
+        if(n==0)
+        {
+        cout<<0<<" "<<0<<" "<<0;
+                return 0;
+        }
+         if(n==1)
+            {
+                cout<<1<<" "<<0<<" "<<0;
+                return 0;
+            }
+    r1=0,r2=1;
+    while(r1+r2+s[2] <= n)
+    {
+        int i=0;
+        if(r2+r1+s[2]==n)
+            {
+                cout<<r1<<" "<<r2<<" "<<s[2];
+                return 0;
+            }
+        
+        r1=s[0],r2=s[1];
+        temp=s[2]+s[1];
+        s[0]=s[1];
+        s[1]=s[2];
+        s[2]=temp;
+        i++;
+       
+    }
+    cout<<"I'm too stupid to solve this problem"<<endl;
+    return 0;
+}
