@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int n,count1=0,count2=0;
+	int k,j;
+	cin>>n;
+	for(int i=1;i<=n;i++)
+	{
+		cin>>k>>j;
+		count1+=k;
+		count2+=j;
+	}
+	int t=0;
+	if(count1 > (n/2))
+		t+=n-count1;
+	else 
+		t+=count1;
+	if(count2 >(n/2))
+		t+=n-count2;
+	else
+		t+=count2;
+	cout<<t;
+
+    return 0;
+}
