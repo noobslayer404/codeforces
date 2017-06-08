@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+ {
+	 char password[81];
+	 string code[10],pop;
+	 cin>>password;
+
+	 for (int f=0;f<10;f++)
+		 cin>>code[f];
+	 int i=0,j=10;
+	 for(int k=0;k<9 && i!=71 && j<=80;k++)
+	 {
+		 for(;i<j;i++)
+		 {
+			 pop+=password[i];
+		 }
+		 j+=10;
+		 for(int q=0;q<10;q++)
+		 {
+			 if(pop == code[q])
+			 {
+				 pop="";
+				 cout<<q;
+				 break;
+			 }
+		 }
+
+	 }
+return 0;
+ }
