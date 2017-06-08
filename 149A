@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+int main(){
+    int k,sum=0,counter=0;
+    vector<int> a;
+    a.resize(12);
+    cin>>k;
+    for(int i=0 ; i<12 ; i++)
+        cin>>a[i];
+    sort(a.begin(),a.end());
+    for(int i = 11 ; i >= 0 && sum < k ;i--){
+        sum+=a[i];
+        counter++;
+    }
+    if( sum < k)
+        cout<<-1;
+    else{
+        cout<<counter;
+    }
+    return 0;
+}
