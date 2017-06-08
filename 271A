@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int y,d,r;
+    cin>>y;
+    int x[4];
+    y++;
+    while(y>0)
+    {
+        d=y;
+        for(int i=0;i<4;i++)
+        {
+            r=d%10;
+            d=d/10;
+            x[i]=r; 
+        }
+        if(x[0]!=x[1] && x[0]!=x[2] && x[0]!=x[3] && x[1]!=x[2] && x[1] != x[3] && x[2]!= x[3])
+        {
+            cout<<y;
+            return 0;
+        }
+        y++;
+        
+    }
+    cout<<y;
+    return 0;
+}
