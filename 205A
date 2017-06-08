@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main()   
+{
+	int min,n,*p;
+	cin>>n;
+	p=new int[n];
+	for( int i=0;i<n;i++)
+		cin>>p[i];
+	min=0;
+	for(int i=1;i<n;i++)
+		if(p[min] > p[i])
+			min=i;
+	for( int i=0;i<n;i++)
+		if( p[i] == p[min] && i != min )
+		{
+			cout<<"Still Rozdil";
+			return 0;
+		}
+	cout <<++min;
+    return 0;
+}
