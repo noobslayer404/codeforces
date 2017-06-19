@@ -1,0 +1,26 @@
+x = {}
+z = int(input())
+s = input()
+s1 = ""
+f = True
+for i in s:
+    if i not in x:
+        x[i]=1
+    else:
+        x[i] += 1
+for i in x:
+    if x[i] % z == 0 :
+        continue
+    else:
+        f = False
+d = z
+if f :
+    while z > 0 :
+        for i in x:
+            if x[i] % d == 0:
+                for j in range(int( x[i]/d )):
+                    s1 += i
+        z -= 1
+else:
+    print(-1)
+print(s1)
