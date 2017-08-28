@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <algorithm>
+#include <vector>
+int main(){
+    int n,m,s,min1,mn;
+    scanf("%d%d",&n,&m);
+    std::vector<int> a;
+    for ( int i = 0; i < m ; ++i ){
+        scanf("%d",&s);
+        a.push_back(s);
+    }
+    std::sort(a.begin(),a.begin()+m);
+    min1 = 1000;
+    int i =0 ,j=i+n-1;
+    for(; j < m ;){
+        mn = a[j]-a[i];
+        if ( mn < min1)
+            min1=mn;
+        i++;
+        j++;
+    }
+    printf("%d",min1);
+}
