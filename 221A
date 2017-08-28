@@ -1,0 +1,33 @@
+/* the idea is that i have an array of  1 to n integer and the array is a permutation so we know that every a[i] = i and no number
+can be repeated after we finish filling the array we do the swap function from the nth element till the 1 element */
+
+
+#include <stdio.h>
+
+void swap(int &n1 , int &n2){
+    int n3 = n1;
+    n1 = n2;
+    n2 = n3;
+}
+
+void sort(int *a ,int i){
+    
+    for (; i > 1 ; --i){
+        swap(a[i],a[i-1]);
+    }
+}
+
+int main(){
+    int *a,n;
+    scanf("%d",&n);
+    a = new int[n+1];
+    for (int i = 1 ; i < n+1 ; ++i){
+        a[i] = i;
+    }
+    sort(a,n);
+    for (int i = 1 ; i < n+1 ; ++i){
+        printf("%d ",a[i]);
+    }
+    
+    return 0;
+}
