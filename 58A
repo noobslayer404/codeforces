@@ -1,0 +1,42 @@
+word = input()
+pointer = 0
+string = ''
+while pointer < len(word):
+    if word[pointer] == 'h':
+        pointer += 1
+        string += 'h'
+        break
+    pointer += 1
+
+while pointer < len(word):
+    if word[pointer] == 'e':
+        pointer += 1
+        string += 'e'
+        break
+    pointer += 1
+
+while pointer < len(word):
+    if word[pointer] == 'l':
+        pointer += 1
+        string += 'l'
+        break
+    pointer += 1
+
+while pointer < len(word):
+    if word[pointer] == 'l':
+        pointer += 1
+        string += 'l'
+        break
+    pointer += 1
+
+while pointer < len(word):
+    if word[pointer] == 'o':
+        pointer += 1
+        string += 'o'
+        break
+    pointer += 1
+
+if string == 'hello':
+    print('YES')
+else:
+    print('NO')
